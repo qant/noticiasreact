@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 
 const Header = ({ title }) => (
   <nav className="nav-wrapperlight-blue darken-3">

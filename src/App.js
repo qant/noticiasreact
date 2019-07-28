@@ -23,6 +23,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header title="Noticias" />
+        <div className="container white news-container">Noticias</div>
       </Fragment>
     );
   }
