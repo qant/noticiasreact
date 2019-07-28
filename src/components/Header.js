@@ -2,7 +2,9 @@ import React from "react";
 
 const Header = ({ title }) => (
   <nav className="nav-wrapperlight-blue darken-3">
-    <a className="brqand-logo center">{title}</a>
+    <a href="#" className="brand-logo center">
+      {title}
+    </a>
   </nav>
 );
 
