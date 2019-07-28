@@ -1,5 +1,12 @@
 import React from "react";
+import Noticia from "./Noticia";
 
-const ListaNoticias = () => <div className="row">Lista Noticias</div>;
+const ListaNoticias = ({ noticias }) => (
+  <div className="row">
+    {noticias.map(noticia => (
+      <Noticia key={noticia.url} noticia={noticia} />
+    ))}
+  </div>
+);
 
 export default ListaNoticias;

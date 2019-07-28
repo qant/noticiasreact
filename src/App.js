@@ -3,7 +3,9 @@ import Header from "./components/Header";
 import ListaNoticias from "./components/ListaNoticias";
 
 class App extends Component {
-  state = {};
+  state = {
+    noticias: []
+  };
 
   componentDidMount() {
     this.consultarNoticias();
@@ -13,19 +15,20 @@ class App extends Component {
     const url = `https://newsapi.org/v2/top-headlines?country=ru&category=business&apiKey=b7aa048b86df4122bfc4c7cacde795a0`;
 
     const response = await fetch(url);
-    const noticias = await response.json();
+    const noticiass = await response.json();
     this.setState({
-      noticias: noticias.articles
+      noticias: noticiass.articles
     });
-    //console.log(noticias.articles);
+    console.log(noticiass.articles);
   };
 
   render() {
+    console.log(this.state.noticias);
     return (
       <Fragment>
         <Header title="Noticias" />
         <div className="container white news-container">
-          <ListaNoticias />
+          <ListaNoticias noticias={this.state.noticias} />
         </div>
       </Fragment>
     );
