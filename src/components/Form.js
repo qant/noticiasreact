@@ -19,7 +19,7 @@ class Form extends Component {
   render() {
     return (
       <div className="buscador row">
-        <div className="s12 m8 offset-2">
+        <div className="col s12 m8 offset-m2">
           <form>
             <h2>Select category</h2>
             <div className="input-field s12 m8">
