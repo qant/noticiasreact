@@ -21,11 +21,9 @@ class App extends Component {
     this.setState({
       noticias: noticiass.articles
     });
-    console.log(noticiass.articles);
   };
 
   render() {
-    console.log(this.state.noticias);
     return (
       <Fragment>
         <Header title="Noticias" />

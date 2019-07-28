@@ -6,11 +6,14 @@ class Form extends Component {
   };
 
   handleOnChange = e => {
-    this.setState({
-      category: e.target.value
-    });
-
-    this.props.consultarNoticias(this.state.category);
+    this.setState(
+      {
+        category: e.target.value
+      },
+      () => {
+        this.props.consultarNoticias(this.state.category);
+      }
+    );
   };
 
   render() {
