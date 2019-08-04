@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import Header from "./components/Header";
 import ListaNoticias from "./components/ListaNoticias";
 import Form from "./components/Form";
+import PropTypes from "prop-types";
 
 class App extends Component {
   state = {
@@ -35,5 +36,17 @@ class App extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired
+};
+
+Form.propTypes = {
+  consultarNoticias: PropTypes.func.isRequired
+};
+
+ListaNoticias.propTypes = {
+  noticias: PropTypes.array.isRequired
+};
 
 export default App;
